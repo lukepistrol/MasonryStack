@@ -9,9 +9,14 @@ https://github.com/lukepistrol/MasonryStack/assets/9460130/db3d0914-672d-4f53-86
 The `MasonryHStack` and `MasonryVStack` can be used just like `HStack` or `VStack`:
 
 ```swift
-var body: some View {
-  MasonryVStack(columns: 2, spacing: 20) {
-    // ...
+import SwiftUI
+import MasonryStack
+
+struct ContentView: View {
+  var body: some View {
+    MasonryVStack(columns: 2, spacing: 20) {
+      // ...
+    }
   }
 }
 ```
