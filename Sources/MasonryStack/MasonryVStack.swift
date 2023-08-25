@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct MasonryVStack: Layout {
+public struct MasonryVStack: Layout {
 
-    var columns: Int = 2
-    var spacing: Double = 8
+    private var columns: Int
+    private var spacing: Double
 
-    func sizeThatFits(
+    public init(columns: Int = 2, spacing: Double = 8.0) {
+        self.columns = columns
+        self.spacing = spacing
+    }
+
+    public func sizeThatFits(
         proposal: ProposedViewSize,
         subviews: Subviews,
         cache: inout ()
@@ -20,7 +25,7 @@ struct MasonryVStack: Layout {
         return calculateSize(for: subviews, in: proposal)
     }
     
-    func placeSubviews(
+    public func placeSubviews(
         in bounds: CGRect,
         proposal: ProposedViewSize,
         subviews: Subviews,
@@ -73,7 +78,7 @@ struct MasonryVStack: Layout {
         )
     }
 
-    static var layoutProperties: LayoutProperties {
+    public static var layoutProperties: LayoutProperties {
         var properties = LayoutProperties()
         properties.stackOrientation = .vertical
         return properties
