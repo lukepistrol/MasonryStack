@@ -6,6 +6,9 @@ https://github.com/lukepistrol/MasonryStack/assets/9460130/db3d0914-672d-4f53-86
 
 ## Usage
 
+> **Note**
+> At this point this does not support lazy loading. Keep this in mind when displaying large amounts of data.
+
 The `MasonryHStack` and `MasonryVStack` can be used just like `HStack` or `VStack`:
 
 ```swift
